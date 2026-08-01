@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of https://www.powerup.money
+host: https://www.powerup.money
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /llms.txt
+  status: 404
+notes: >-
+  PowerUp Money is a consumer mutual-fund advisory app (SEBI-registered RIA);
+  no public developer/API surface was found. No /.well-known documents or
+  llms.txt are published. Recorded for auditability; empty result is expected.

@@ -1,8 +1,27 @@
 aid: powerup-money
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/powerup-money.png
 name: Powerup Money
-description: 'Powerup Money is a company surfaced as a portfolio company of accel and added to the API
-  Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'PowerUp Money is an India-based mutual fund advisory app that helps retail
+  investors select, monitor, and rebalance their mutual fund portfolios. It is operated by
+  a SEBI-registered Investment Advisor (RIA No. INA000019798) and BSE member (IA-BSE Membership
+  No. 2465), and describes itself as "India''s trusted Mutual Fund Advisory App" serving
+  900,000+ investors. Consumer-facing features include portfolio performance analysis, fund
+  recommendations (start/pause/exit SIP guidance), monthly portfolio reports, and Elite
+  membership tools such as Power Rank fund selection, Rank Trends monitoring, and Power
+  Rebalancing for tax-efficient quarterly adjustments. It is distributed as iOS and Android
+  mobile apps; no public developer API, documentation, or SDK surface was found. Added to
+  the API Evangelist network as an Accel portfolio company.'
 url: https://raw.githubusercontent.com/api-evangelist/powerup-money/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +31,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Fintech
+- Wealth Management
+- Investing
+- Mutual Funds
+- Personal Finance
+- India
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +47,20 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/powerup-money-domain-security.yml
+- type: WellKnown
+  url: well-known/powerup-money-well-known.yml
 - type: Website
   url: https://www.powerup.money/
+- type: Blog
+  url: https://www.powerup.money/blog
+- type: SignUp
+  url: https://apps.apple.com/in/app/powerup-money-learn-invest/id6470202376
+- type: Support
+  url: mailto:care@powerup.money
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
