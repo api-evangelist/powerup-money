@@ -2,20 +2,24 @@ generated: '2026-07-20'
 method: searched
 source: live probes of https://www.powerup.money
 host: https://www.powerup.money
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-- path: /llms.txt
-  status: 404
-notes: >-
-  PowerUp Money is a consumer mutual-fund advisory app (SEBI-registered RIA);
-  no public developer/API surface was found. No /.well-known documents or
-  llms.txt are published. Recorded for auditability; empty result is expected.
+notes: PowerUp Money is a consumer mutual-fund advisory app (SEBI-registered RIA); no public developer/API
+  surface was found. No /.well-known documents or llms.txt are published. Recorded for auditability; empty
+  result is expected.
+hosts:
+- host: https://www.powerup.money
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
